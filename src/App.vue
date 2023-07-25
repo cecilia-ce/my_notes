@@ -37,7 +37,6 @@
     background-image: url("/img/Estrelas.png"); 
     background-attachment: fixed;
     background-size: cover;
-    
   }
 
   .main-container{
