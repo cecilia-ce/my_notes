@@ -1,0 +1,18 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "text": "Esta é minha primeira anotação"
+    },
+    {
+      "text": "Cecília Raquel Albuquerque Dutra ",
+      "id": 2
+    }
+  ],
+  "checklist": [
+    {
+      "id": 1,
+      "text": "Esse é meu primeiro item do checklist"
+    }
+  ]
+}
