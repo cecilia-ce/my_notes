@@ -3,18 +3,40 @@
         <div class="form-header">
             <h1>MINHAS ANOTAÇÕES</h1>
             <button class="btn-main">Excluir tudo</button>
-            <button class="btn-main">Salvar</button>
+            <button class="btn-main" @click="createNote($event)">Salvar</button>
         </div>
-        <textarea id="text-area-note" placeholder="Digite sua anotação"></textarea>
+        <textarea id="text-area-note" placeholder="Digite sua anotação" v-model="text"></textarea>
     </div>
 </template>
 
 <script>
+import NotesViewVue from '../views/NotesView.vue';
 export default{
     name: 'NoteForm',
     data(){
+        text: null
 
     },
+    methods: {
+        async createNote(e){
+            e.preventDefault();
+            const data = {
+                text: this.text  
+            }; 
+            
+            const dataJson = JSON.stringify(data);
+
+            const req = await fetch('http://localhost:3000/notes', {
+                method: "POST",
+                headers: {"content-type": "application/json"}, 
+                body: dataJson
+            });
+
+            const res = await req.json();
+
+        }
+    },
+    
     
 }
 </script>

@@ -3,7 +3,7 @@
         <div class="card-header">
             <button class="btn-delete">Excluir</button>
         </div>
-        <p id="note-text" class="note-text">Texto testesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+        <p id="note-text" class="note-text">{{ noteText }}</p>
     </div>
 </template>
 
@@ -11,8 +11,14 @@
 export default{
     name: 'NoteCard',
     data(){
-
+        return{
+            
+        }
+    },
+    props: {
+        noteText: String
     }
+    
     
 }
 </script>
